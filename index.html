@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="style/css.css">
+    <link rel="stylesheet"  href="style/responsive.css">
+    
+    <!-- fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+    <!-- owl -->
+    <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
+
+    
+
+    <title>Netflix</title>
+</head>
+
+<body>
+        <header>
+            <div class="container">
+                <h2 class="logo">NETFLIX</h2>
+                <nav>
+                    <a href="#">Início</a>
+                    <a href="#">Séries</a>
+                    <a href="#">Filmes</a>
+                    <a href="#">Documentários</a>
+                </nav>
+            </div>
+        </header>
+    
+        <main>
+            <div class="filme-principal">
+                <div class="container">
+                    <img id="logodark" src="img/logodark.png" alt="">
+                    <!--  <h3 class="titulo">DARK</h3> -->
+                    <p class="descricao">Quatro famílias iniciam uma desesperada busca por respostas quando uma criança desaparece e um complexo mistério envolvendo três gerações começa a se revelar.</p>
+                    <div class="botoes">
+                        <button role="button" class="botao">
+                            <i class="fa-solid fa-play"></i>
+                            ASSISTIR AGORA
+                        </button>
+                        <div class="trailer">
+                            <iframe width="1469" height="825" src="https://www.youtube.com/embed/v2FIQRsQR0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <span class="close">&times;</span>
+                        </div>
+                        <button role="button" class="botao">
+                            <i class="fa-solid fa-circle-info"></i>
+                            MAIS INFORMAÇÕES
+                        </button>
+                    </div>
+                </div>    
+            </div>
+        </main>
+    
+        <div class="carrosel">
+            <div class="owl-carousel owl-stage">
+                
+                <div class="item">
+                    <img src="img/mini2.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/mini3.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/mini4.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/mini5.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/mini6.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/mini7.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/mini8.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/mini9.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/mini10.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            const button = document.querySelector("button");
+            const close = document.querySelector(".close");
+            const trailer = document.querySelector(".trailer");
+            const video = document.querySelector("video");
+                
+            button.addEventListener('click', ()=>{
+                trailer.style.visibility = "visible";
+                trailer.style.opacity = 1;
+            });
+    
+            close.addEventListener('click', ()=>{
+                trailer.style.visibility = "hidden";
+                trailer.style.opacity = 0;
+                video.pause();
+                video.currentTime = 0;
+            });
+        </script>
+    
+        <script src="https://kit.fontawesome.com/9ae6ab4184.js" crossorigin="anonymous"></script>
+        <script src="js/owl/jquery.min.js"></script>
+        <script src="js/owl/owl.carousel.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/all.min.js"></script>
+    </body>
+    </html>
